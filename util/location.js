@@ -10,7 +10,7 @@ async function getCoordsForAddress(address) {
   //   lng: -73.9871516
   // };
   const response = await axios.get(
-    `https://api.mapbox.com/geocoding/v5/mapbox.places/sarajevo.json?types=place%2Cpostcode%2Caddress&access_token=${mapToken}`
+    `https://api.mapbox.com/geocoding/v5/mapbox.places/${address}.json?types=place%2Cpostcode%2Caddress&access_token=${mapToken}`
   );
 
   const data = response.data;
